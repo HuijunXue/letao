@@ -1,0 +1,12 @@
+$(function(){
+    $('.logoutBtn').click(function(){
+        $.ajax({
+            type:"get",
+            url:"/employee/employeeLogout",
+            dataType:"json",
+            success:function(data){
+                console.log(data);
+            }
+        });
+    });
+});

@@ -1,12 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+    <link src="./lib/nprogress/nprogress.css"></link>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
+
 </head>
+
 <body>
-    <h1>I am manage system</h1>
+    <div class="aside">
+        <a class="brand">乐淘管理</a>
+        <div class="nav">
+            <div class="user">
+                <img src="./images/default.jpg" alt="">
+                <p class="name">超级管理员</p>
+            </div>
+            <ul>
+                <li>
+                    <a href="user.html" class="user-manage">
+                        <i class="glyphicon glyphicon-user"></i>
+                        <span>用户管理</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;" class="category-manage">
+                        <i class="glyphicon glyphicon-list"></i>
+                        <span>分类管理</span>
+                    </a>
+                    <div class="nav2">
+                        <ul>
+                            <li>
+                                <a href="first.html">一级分类</a>
+                            </li>
+                            <li>
+                                <a href="second.html">二级分类</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" class="product-manage">
+                        <i class="glyphicon glyphicon-tags"></i>
+                        <span>商品管理</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="header">
+        <a class="menu pull-left">
+            <i class="glyphicon glyphicon-align-justify"></i>
+        </a>
+        <a class="back pull-right">
+            <i class="glyphicon glyphicon-log-out"></i>
+        </a>
+    </div>
+    <div class="main">
+        <div class="content">
+            <ol class="breadcrumb">
+                <li>
+                    <a href="index.html">系统管理</a>
+                </li>
+                <li class="active">
+                    <sapn>首页</span>
+                </li>
+            </ol>
+        </div>
+    </div>
+    <div class="modal fade bs-example-modal-sm" tabindex="-1">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">温馨提示</h4>
+                </div>
+                <div class="modal-body">
+                    <p class="red"><i class="glyphicon glyphicon-info-sign"></i> 您确定要退出后台管理系统吗？</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" id="logoutBtn">确定</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">取消</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
 </body>
+<script src="./lib/jquery/jquery.js"></script>
+<script src="./lib/bootstrap/js/bootstrap.js"></script>
+<script src="./lib/nprogress/nprogress.js"></script>
+<script src="./js/common.js"></script>
+
 </html>
