@@ -94,6 +94,10 @@ a:link, a:visited, a:hover, a:active {
   color: white;  
 }
 
+.current{
+  border-left:3px solid #006699;
+}
+
 .nav ul li a i{
   margin-right:7px; 
 }
