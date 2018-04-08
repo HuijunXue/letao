@@ -106,12 +106,12 @@ a:link, a:visited, a:hover, a:active {
   display: none;
 }
 
-.nav2 ul li a{
+.nav .nav2 ul li a{
   display: block;
+  /* border-left:3px solid transparent;  */
   border: none;
   padding: 0;
   text-align: center;
-
 }
 
 .header{
@@ -143,7 +143,6 @@ a:link, a:visited, a:hover, a:active {
   height: 1000px;
   padding-left: 180px;
   padding-top:50px; 
-  background-color: pink;
   transition: all 1s;
 }
 
@@ -157,5 +156,9 @@ a:link, a:visited, a:hover, a:active {
 
 .active{
   color: #777;
+}
+
+.red{
+  color: #A94442;
 }
 

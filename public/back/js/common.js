@@ -19,7 +19,7 @@ $(function(){
     });
 
     $('.back').click(function(){
-        $('.modal').modal();
+        $('#logoutModal').modal('show');
     });
 
     $('#logoutBtn').click(function(){
@@ -32,8 +32,27 @@ $(function(){
                 {
                     window.location.href = "login.html";
                 }
+                $('#logoutModal').modal('hide');
             }
         });
     });
+
+    if(location.href.indexOf('login.html'))
+    {
+        $.ajax({
+            type:"get",
+            url:"/employee/checkRootLogin",
+            dataType:"json",
+            success:function(data){
+                // console.log(data.success);
+                console.log(data);
+                if(data.error == 400)
+                {
+                    location.href = "login.html";
+                }
+            }
+        });
+    }
+    
 
 });

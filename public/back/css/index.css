@@ -1,3 +1,9 @@
-.red{
-    color: #A94442;
+.bar{
+    width: 48%;
+    height: 400px;
+}
+
+.pie{
+    width: 48%;
+    height: 400px;
 }
