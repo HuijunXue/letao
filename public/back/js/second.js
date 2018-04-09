@@ -13,9 +13,9 @@ $(function(){
                 $('.table tbody').html(template('brandTemplate',data));
                 $('#paginator').bootstrapPaginator({
                     bootstrapMajorVersion: 3,
-                    currentPage:data.page,
-                    totalPages:Math.ceil(data.total/data.size),
-                    onPageClicked:function(a,b,c,page){
+                    currentPage: data.page,
+                    totalPages: Math.ceil(data.total / data.size),
+                    onPageClicked: function (a, b, c, page) {
                         currentPage = page;
                         render();
                     }
