@@ -16,34 +16,3 @@
     width: 100%;
 }
 
-.product{
-    padding: 10px;
-}
-
-.product ul li{
-    border: 1px solid #ccc;
-    width: 48%;
-    padding: 10px;
-    text-align: center;
-}
-.product ul li img{
-    display: block;
-    width: 100%;
-}
-.product ul li:nth-child(odd){
-    float: left;
-    margin-right:4%; 
-}
-
-.product ul li:nth-child(even){
-    float:right;
-}
-
-.newPrice{
-    color: red;
-}
-
-.oldPrice{
-    text-decoration: line-through;
-    color: #666;
-}

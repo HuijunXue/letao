@@ -11,3 +11,15 @@ mui('.mui-scroll-wrapper').scroll({
 $('.footer a').on('click',function(){
     $(this).addClass('current').parent().siblings().find('a').removeClass('current');
 });
+
+function querystrToObj(key)
+{
+    var obj = {};
+    var arr = decodeURI(location.search).slice(1).split("&");
+    arr.forEach(function(v,i){
+        var key = v.split("=")[0];
+        var value = v.split("=")[1];
+        obj[key] = value;
+    });
+    return obj[key];
+}

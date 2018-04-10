@@ -1,0 +1,52 @@
+.borderBox{
+    border-top:1px solid #CCCCCC;
+    padding:10px; 
+}
+
+.title strong{
+    font-size:18px; 
+}
+
+.newPrice{
+    color: red;
+    font-size:17px; 
+}
+.oldPrice{
+    color: #666;
+    font-size:12px; 
+    text-decoration: line-through;
+}
+
+.size span{
+   padding: 5px;
+   background-color: #f5f5f5;
+   border:1px solid #ccc; 
+   font-size:12px; 
+}
+
+.size{
+    padding:15px 10px; 
+}
+
+.numBox>span{
+    display: inline-block;
+    font-size:12px;
+    color: #666; 
+    line-height: 30px;
+}
+
+
+.goCart{
+    width: 100%;
+    padding: 10px 10px 0 10px;
+    border-top:1px solid red;
+    height: 55px; 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #EFEFF4;
+}
+
+.goCart .left{
+    padding: 5px;
+}

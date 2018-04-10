@@ -1,0 +1,30 @@
+
+.title{
+    font-size:14px;
+    color: #666; 
+}
+
+.content ul{
+    border: 1px dashed #FF0000;
+}
+
+.content li{
+    padding: 0 10px;
+    height: 30px;
+    line-height: 30px;
+    border-bottom:1px dashed #FF0000; 
+}
+
+.content li:last-child{
+    border-bottom:none; 
+}
+
+.content li a{
+    color: #007aff;
+    font-size:14px; 
+    padding: 0 20px 0 0;
+}
+
+.content li i{
+    line-height: 30px;
+}

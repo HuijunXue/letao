@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./lib/mui/css/mui.css">
     <link rel="stylesheet" href="./lib/fa/css/font-awesome.css">
     <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/category.css">
+    <link rel="stylesheet" href="./css/search.css">
 </head>
 
 <body>
@@ -24,42 +24,24 @@
             </a>
         </div>
         <div class="main">
-            <div class="left">
-                <div class="mui-scroll-wrapper">
-                    <div class="mui-scroll">
-                        <ul class="categoryUl">
-                            <!-- <li>
-                                <a href="#" class="current">运动馆</a>
-                            </li> -->
-                        </ul>
-                    </div>
-                </div>
+            <div class="searchBox">
+                <input type="text" placeholder="请输入搜索内容" class="searchInput">
+                <a href="javascript:;" class="mui-btn mui-btn-primary searchBtn">搜索</a>
             </div>
-            <div class="right">
-                <div class="mui-scroll-wrapper">
-                    <div class="mui-scroll">
-                        <ul>
-                            <!-- <li>
-                                <a href="#">
-                                    <img src="./images/brand1.png" alt="">
-                                    <p>耐克</p>
-                                </a>
-                            </li> -->
-                        </ul>
-                    </div>
-                </div>
+            <div class="historyBox">
+                <!--挖个大坑-->
             </div>
         </div>
         <div class="footer">
             <ul class="mui-clearfix">
                 <li>
-                    <a href="./index.html">
+                    <a href="./index.html" class="current">
                         <i class="fa fa-home"></i>
                         <p>首页</p>
                     </a>
                 </li>
                 <li>
-                    <a href="./category.html" class="current">
+                    <a href="./category.html">
                         <i class="fa fa-bars"></i>
                         <p>分类页</p>
                     </a>
@@ -80,27 +62,31 @@
         </div>
     </div>
 </body>
-<script type="text/template" id="leftTemplate">
-    {{each rows v i}}
-    <li>
-        <a href="#" class="{{i==0?" current ":" "}}" data-id="{{v.id}}">{{v.categoryName}}</a>
-    </li>
-    {{/each}}
-</script>
-<script type="text/template" id="rightTemplate">
-    {{each rows v i}}
-    <li>
-        <a href="#">
-            <img src="{{v.brandLogo}}" alt="">
-            <p>{{v.brandName}}</p>
-        </a>
-    </li>
-    {{/each}}
+<script type="text/template" id="historyTemplate">
+    {{if list.length !== 0}}
+    <div class="title mui-clearfix">
+        <span class="mui-pull-left">搜索历史</span>
+        <span class="mui-pull-right clearHistoryBtn">
+            <i class="fa fa-trash"></i> 清空历史记录</span>
+    </div>
+    <div class="content">
+        <ul>
+            {{each list v i}}
+            <li class="mui-clearfix">
+                <a class="mui-pull-left">{{v}}</a>
+                <i class="btn_delete mui-pull-right mui-icon mui-icon-closeempty" data-index="{{i}}"></i>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+    {{else}}
+    <div>没有历史搜索记录</div>
+    {{/if}}
 </script>
 <script src="./lib/zepto/zepto.min.js"></script>
 <script src="./lib/mui/js/mui.js"></script>
 <script src="./js/common.js"></script>
-<script src="./js/category.js"></script>
+<script src="./js/search.js"></script>
 <script src="./lib/artTemplate/template-web.js"></script>
 
 </html>

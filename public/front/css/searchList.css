@@ -1,0 +1,16 @@
+.actionBox{
+    background-color: #EEEEEE;
+}
+.actionBox a{
+    float: left;
+    width: 25%;
+    height: 30px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    line-height: 30px;
+}
+
+.actionBox a.current{
+    color: orangered;
+}
