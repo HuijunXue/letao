@@ -1,0 +1,48 @@
+.left{
+    width: 90px;
+    height: 100%;
+    float: left;
+    background: white;
+    position: relative;
+}
+
+.right{
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.left ul li a{
+    display: block;
+    width: 90px;
+    height: 50px;
+    border-bottom:1px solid #666;
+    border-right: 1px solid #666;
+    background-color:#ccc;
+    text-align: center;
+    line-height: 50px;  
+    font-size:16px;
+    color: #666; 
+}
+
+.left ul li a.current{
+    background-color: white;
+    border-right:0; 
+}
+
+.right ul li{
+    float: left;
+    width: 33.3%;
+    padding: 5px;
+}
+
+.right ul li a{
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.right ul li a img{
+    width: 70px;
+    height: 50px;
+}
