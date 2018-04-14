@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./lib/mui/css/mui.css">
     <link rel="stylesheet" href="./lib/fa/css/font-awesome.css">
     <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/search.css">
+    <link rel="stylesheet" href="./css/login.css">
 </head>
 
 <body>
@@ -24,13 +24,20 @@
             </a>
         </div>
         <div class="main">
-            <div class="searchBox">
-                <input type="text" placeholder="请输入搜索内容" class="searchInput">
-                <a href="javascript:;" class="mui-btn mui-btn-primary searchBtn">搜索</a>
-            </div>
-            <div class="historyBox">
-                <!--挖个大坑-->
-            </div>
+            <form class="mui-input-group">
+                <div class="mui-input-row">
+                    <label>用户名</label>
+                    <input type="text" name="username" class="mui-input-clear" placeholder="请输入用户名">
+                </div>
+                <div class="mui-input-row">
+                    <label>密码</label>
+                    <input type="password" name="password" class="mui-input-password" placeholder="请输入密码">
+                </div>
+                <div class="mui-button-row">
+                    <button type="button" class="mui-btn mui-btn-primary yesBtn">确认</button>
+                    <button type="reset" class="mui-btn mui-btn-danger resetBtn">重置</button>
+                </div>
+            </form>
         </div>
         <div class="footer">
             <ul class="mui-clearfix">
@@ -62,31 +69,9 @@
         </div>
     </div>
 </body>
-<script type="text/template" id="historyTemplate">
-    {{if list.length !== 0}}
-    <div class="title mui-clearfix">
-        <span class="mui-pull-left">搜索历史</span>
-        <span class="mui-pull-right clearHistoryBtn">
-            <i class="fa fa-trash"></i> 清空历史记录</span>
-    </div>
-    <div class="content">
-        <ul>
-            {{each list v i}}
-            <li class="mui-clearfix">
-                <a href="./searchList.html?key={{v}}" class="mui-pull-left">{{v}}</a>
-                <i class="btn_delete mui-pull-right mui-icon mui-icon-closeempty" data-index="{{i}}"></i>
-            </li>
-            {{/each}}
-        </ul>
-    </div>
-    {{else}}
-    <div>没有历史搜索记录</div>
-    {{/if}}
-</script>
 <script src="./lib/zepto/zepto.min.js"></script>
 <script src="./lib/mui/js/mui.js"></script>
 <script src="./js/common.js"></script>
-<script src="./js/search.js"></script>
-<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./js/login.js"></script>
 
 </html>

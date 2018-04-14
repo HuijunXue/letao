@@ -1,0 +1,14 @@
+.headImg{
+    width: 42px;
+    height: 42px;
+}
+.username{
+    font-size:16px;
+    color: black; 
+}
+.logout{
+    padding: 15px;
+}
+.logoutBtn{
+    width: 100%;
+}

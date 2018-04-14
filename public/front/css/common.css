@@ -148,6 +148,11 @@ ul {
     text-align: center;
     margin-bottom:10px; 
 }
+
+.product ul li a .mui-ellipsis-2{
+    height: 42px;
+}
+
 .product ul li img{
     display: block;
     width: 100%;
@@ -169,3 +174,21 @@ ul {
     text-decoration: line-through;
     color: #666;
 }
+
+/*尺寸列表*/
+.size span{
+    padding: 5px;
+    background-color: #f5f5f5;
+    border:1px solid #ccc; 
+    font-size:12px; 
+ }
+ 
+ .size{
+     padding:15px 10px; 
+     line-height: 30px;
+ }
+ 
+ .size span.current{
+     background-color: blue;
+     color: white;
+ }

@@ -14,3 +14,24 @@
 .actionBox a.current{
     color: orangered;
 }
+
+.loading{
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 3px solid darkblue;
+    transition: all 1s;
+    animation: rotate 1s infinite;
+}
+
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}

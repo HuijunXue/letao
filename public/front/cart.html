@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/cart.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="javascript:history.go(-1)" class="home">
+                <i class="fa fa-mail-reply"></i>
+            </a>
+            <h3>乐淘云购</h3>
+            <a href="#" class="search">
+                <i class="fa fa-search"></i>
+            </a>
+        </div>
+        <div class="main">
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <ul class="mui-table-view cart-products">
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="total">
+            <div class="context mui-pull-left">订单总金额&nbsp;&yen;00.00</div>
+            <div class="order-btn mui-pull-right">生成订单</div>
+        </div>
+        <div class="footer">
+            <ul class="mui-clearfix">
+                <li>
+                    <a href="./index.html">
+                        <i class="fa fa-home"></i>
+                        <p>首页</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="./category.html">
+                        <i class="fa fa-bars"></i>
+                        <p>分类页</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="./cart.html" class="current">
+                        <i class="fa fa-shopping-cart"></i>
+                        <p>购物车</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="./user.html">
+                        <i class="fa fa-user"></i>
+                        <p>会员中心</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script type="text/template" id="cartTemplate">
+    {{each list v i}}
+    <li class="mui-table-view-cell mui-transitioning mui-selected">
+        <div class="mui-slider-right mui-disabled mui-selected">
+            <a data-cartid="{{v.id}}" data-size="{{v.size}}" data-num="{{v.num}}" data-sizerange="{{v.productSize}}" data-productnum="{{v.productNum}}" class="mui-btn mui-btn-blue mui-icon mui-icon-compose btn_edit"></a>
+            <a data-cartid="{{v.id}}" class="mui-btn mui-btn-red mui-icon mui-icon-trash btn_delete"></a>
+        </div>
+        <div class="mui-slider-handle">
+            <div class="mui-table-cell">
+                <div class="left mui-pull-left">
+                    <img src="{{v.pic[0].picAddr}}" alt="">
+                    <input type="checkbox" class="ck" data-cartid="{{v.id}}" data-num="{{v.num}}" data-price="{{v.price}}">
+                </div>
+                <div class="right">
+                    <p class="title mui-ellipsis-2">{{v.proName}}</p>
+                    <p class="info mui-clearfix">
+                        <span class="price mui-pull-left">
+                            <i class="newPrice">&yen;{{v.price}}</i>&nbsp;
+                            <i class="oldPrice">&yen;{{v.oldPrice}}</i>
+                        </span>
+                        <span class="num mui-pull-right">{{v.num}}双</span>
+                    </p>
+                    <p class="size">{{v.size}}</p>
+                </div>
+            </div>
+        </div>
+    </li>
+    {{/each}}
+</script>
+<script type="text/template" id="confirmTemplate">
+    <div class="size borderBox">
+        尺码：
+        <% 
+            var start = sizerange.split('-')[0];
+            var end = sizerange.split('-')[1];
+            for(var i = start; i <= end; i++) 
+            { %>
+            <span class="{{i==size?'current':''}}">{{i}}</span>
+            <% } %>
+    </div>
+    <div class="numBox borderBox">
+        数量：
+        <div class="mui-numbox" data-numbox-step='1' data-numbox-min='0' data-numbox-max='{{productnum}}'>
+            <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+            <input class="mui-numbox-input" type="number" value="{{num}}" />
+            <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+        </div>
+    </div>
+</script>
+<script src="./lib/zepto/zepto.min.js"></script>
+<script src="./lib/mui/js/mui.js"></script>
+<script src="./js/common.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./js/cart.js"></script>
+
+</html>

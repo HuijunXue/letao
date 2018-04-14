@@ -1,0 +1,9 @@
+require.config({
+    baseUrl:'/mobile/',
+    paths:{
+        template:'./lib/artTemplate/template-web',
+        mui:'./lib/mui/js/mui',
+        zepto:'./lib/zepto/zepto.min',
+        common:'./js/common'
+    }
+});

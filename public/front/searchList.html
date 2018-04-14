@@ -15,7 +15,7 @@
 <body>
     <div class="container">
         <div class="header">
-            <a href="#" class="home">
+            <a href="javascript:history.go(-1)" class="home">
                 <i class="fa fa-mail-reply"></i>
             </a>
             <h3>乐淘云购</h3>
@@ -65,7 +65,7 @@
         <div class="footer">
             <ul class="mui-clearfix">
                 <li>
-                    <a href="./index.html" class="current">
+                    <a href="./index.html">
                         <i class="fa fa-home"></i>
                         <p>首页</p>
                     </a>
@@ -77,13 +77,13 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="./cart.html">
                         <i class="fa fa-shopping-cart"></i>
                         <p>购物车</p>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="./user.html">
                         <i class="fa fa-user"></i>
                         <p>会员中心</p>
                     </a>
@@ -95,7 +95,7 @@
 <script type="text/template" id="productTemplate">
     {{each data v i}}
     <li>
-        <a href="product.html?productId={{ v.id }}">
+        <a href="product.html?id={{ v.id }}">
             <img src="{{v.pic[0]?v.pic[0].picAddr:'./images/none.png'}}" alt="">
             <p class="mui-ellipsis-2">{{v.proName}}</p>
             <p>
